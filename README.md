@@ -1,2 +1,3 @@
-# active-mmds
-Python implementation of active metric MDS
+# pyMMDS
+
+Python implementation of active metric MDS.

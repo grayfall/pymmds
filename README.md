@@ -8,3 +8,17 @@ package implements an active metric MDS method described in "Principal Component
 and Correspondence Analysis in R" by Dr. Herve Abdi (2017) and is thus similar 
 to package bios2mds written in the R language. The method allows new objects to 
 be projected onto an existing space defined by a set of active objects.
+
+### Installation
+
+```
+git clone https://github.com/grayfall/pymmds.git
+cd pymmds
+pip install .
+```
+
+### Requirements
+
+- Python >= 3.5
+- NumPy >= 1.14.0
+- Pandas >= 0.22.0

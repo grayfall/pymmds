@@ -1,6 +1,6 @@
 # pyMMDS
 
-A Python implementation of active metric MDS. Classic metric MDS transforms a 
+Extendible metric MDS in Python. Classic metric MDS transforms a 
 symmetric matrix of metric distances between N objects into a set of projections 
 in an orthonormal space. The method is akin to PCA, though unlike PCA it doesn't 
 provide a straightforward way to project new objects onto the space. This 

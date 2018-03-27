@@ -17,6 +17,9 @@ import numpy as np
 import pandas as pd
 
 
+__all__ = ["Space", 'read_dm']
+
+
 class Space:
     def __init__(self, dm: pd.DataFrame):
         """

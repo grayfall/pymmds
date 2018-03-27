@@ -17,6 +17,12 @@ cd pymmds
 pip install .
 ```
 
+or simply 
+
+```
+pip install git+https://github.com/grayfall/pymmds.git
+```
+
 ### Requirements
 
 - Python >= 3.5

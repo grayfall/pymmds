@@ -34,9 +34,9 @@ pip install git+https://github.com/grayfall/pymmds.git
 
 There is only one core object (`mmds.Space`) and two methods to consider:
 
-- `Space.__init__` - takes a symmetric distance matrix of active (landmark)
+- `Space.__init__(dm: pandas.DataFrame)` - takes a symmetric distance matrix of active (landmark)
 samples and creates an MDS space
-- `Space.project` - takes table of distances between any number of supplementary 
+- `Space.project(dm: pandas.DataFrame)` - takes a table of distances between any number of supplementary 
 samples and all active samples and projects the former onto the initialised
 MDS space.
 

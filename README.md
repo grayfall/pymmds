@@ -33,6 +33,6 @@ There is also a utility function `mmds.read_dm` that will help you read the
 DMs in case you don't want to tweak `pandas.read_csv` yourself.  
 
 All functions and methods are well-documented. You can either use Python's `help`,
-iPython's `?` or whatever docstring tools your IDE provide to view the docs from 
+iPython's `?` or whatever docstring tools your IDE provides to view the docs from 
 within your development environment or read the 
 [Wiki page](https://github.com/grayfall/pymmds/wiki).

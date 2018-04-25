@@ -16,7 +16,7 @@ whenever one needs to have a stable and scalable MDS transformation.
 ### Installation
 
 ```
-pip install git+https://github.com/grayfall/pymmds.git
+pip install pymmds
 ```
 
 ### Usage

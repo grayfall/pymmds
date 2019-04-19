@@ -36,7 +36,7 @@ class Space:
             raise ValueError('duplicate object names')
         if len(dm.select_dtypes(include=[np.number]).columns) != len(dm.keys()):
             raise ValueError('a distance matrix must be strictly numeric')
-        distances = cast(np.ndarray, dm.as_matrix().copy())
+        distances = cast(np.ndarray, dm.values.copy())
         if not np.isfinite(distances).all():
             raise ValueError("all values in the distance matrix must be finite")
         if distances.diagonal().any():
@@ -124,7 +124,7 @@ class Space:
         if len(dm.select_dtypes(include=[np.number]).columns) != len(dm.keys()):
             raise ValueError('a distance matrix must be strictly numeric')
         # make sure all columns are in correct order
-        distances = cast(np.ndarray, dm[self.keys].as_matrix().copy())
+        distances = cast(np.ndarray, dm[self.keys].values.copy())
         if not np.isfinite(distances).all():
             raise ValueError("all values in the distance matrix must be finite")
         n_act = len(self.keys)
@@ -132,7 +132,7 @@ class Space:
         d_sup = distances ** 2
         masses_sup = np.full((n_act, n_sup), (1 / n_act))
         s_sup = -0.5 * self._masses_act @ (d_sup.T - (self._d_act @ masses_sup))
-        f_sup = s_sup.T @ self.active.as_matrix() @ np.diag(self._values**-1)
+        f_sup = s_sup.T @ self.active.values @ np.diag(self._values**-1)
         return pd.DataFrame(f_sup, index=list(dm.index))
 
 
